@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tipCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,144 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Service Rating" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w1Q-rX-hxa">
+                                <frame key="frameInset" minX="138.5" minY="342.5" width="98" height="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bill Price" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVE-Bd-TTM">
+                                <frame key="frameInset" minX="138" minY="235" width="101" height="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AZ-cV-JAZ">
+                                <frame key="frameInset" minX="141" minY="398" width="92" height="30"/>
+                                <color key="backgroundColor" red="0.88434004759999996" green="0.90525000730000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="CALCULATE">
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="calcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vef-Vs-7Bi"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dwG-IX-jl4">
+                                <frame key="frameInset" minX="140.5" minY="308" width="94" height="29"/>
+                                <color key="backgroundColor" red="0.88434004759999996" green="0.90525000730000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="0.80000000000000004"/>
+                                <connections>
+                                    <action selector="Stepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="bbn-pB-cG6"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8c-6K-ijU">
+                                <frame key="frameInset" minX="164" minY="279" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="--" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DcT-fe-cPu">
+                                <frame key="frameInset" minX="130" minY="459" width="115" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TIP CALCULATOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jJ-jm-h5X">
+                                <frame key="frameInset" minY="177" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94339116476576368" green="0.92736699609438245" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="07j-iw-weI"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2zV-vN-KLW"/>
+                            <constraint firstItem="3jJ-jm-h5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ju-1N-Y74"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="4Go-3q-bzj"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5PU-6R-gsu"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="5b4-Ub-4ne"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="7tt-aZ-Hmo"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="8Lt-yY-2hG"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8cG-KI-NEi"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Xa-zD-utz"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="9cu-UG-hTb"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="ANX-uP-wXW"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Aes-An-gwF"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BOs-kc-PPO"/>
+                            <constraint firstItem="3jJ-jm-h5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CNq-fI-ERf"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="97.5" id="DFu-er-F2R"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E76-J3-APk"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-82" id="EIG-hp-5qX"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="GaO-hx-1Wf"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="GjN-Hk-6JH"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HI3-ma-Zbw"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="K3d-kk-VTW"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LdC-sr-FdG"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="NfD-4d-HLt"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OK9-Qd-qBE"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="39.5" id="OO1-2i-TN6"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PI0-tD-LcG"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-82" id="PY0-VO-fsf"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pf9-6m-uWM"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QXb-q1-znR"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="S8H-iX-fUx"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TnQ-kK-ynt"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="Tzi-kD-4Xm"/>
+                            <constraint firstItem="3jJ-jm-h5X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UW7-Gl-qb1"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="VIk-ie-HdX"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VOh-1l-Vtb"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="WSW-aj-3kB"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="WnX-AI-kf2"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WrW-eu-EH2"/>
+                            <constraint firstItem="3jJ-jm-h5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xai-Kb-MGZ"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZVk-nZ-Lhx"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZpZ-Jt-03t"/>
+                            <constraint firstItem="3jJ-jm-h5X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-143" id="bcG-FE-UQi"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cA0-P6-eFa"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cVp-wY-d2M"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dRt-l3-pTv"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerX" secondItem="y8c-6K-ijU" secondAttribute="centerX" id="eFd-tV-M8v"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="ezz-rE-paW"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="ftw-HS-HfS"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerX" secondItem="y8c-6K-ijU" secondAttribute="centerX" id="g5L-h9-rab"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hTb-Bu-B16"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ha4-8K-hPI"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="hsE-5J-sdz"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jtd-nr-yt1"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kJe-YE-5tR"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="kja-Yv-h6v"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerX" secondItem="y8c-6K-ijU" secondAttribute="centerX" id="lQn-oo-KcX"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="leB-TB-9b8"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="ll1-ta-3JB"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="mFt-Im-Itl"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="198.5" id="mNq-IW-RX9"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="oGl-jW-tNj"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="qAI-mP-TQX"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="t4l-N3-fMS"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerX" secondItem="y8c-6K-ijU" secondAttribute="centerX" id="tc1-1C-Ybn"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="td9-Cz-gKl"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="u3V-N3-Z6j"/>
+                            <constraint firstItem="dwG-IX-jl4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-49" id="vjK-1U-AJq"/>
+                            <constraint firstItem="3jJ-jm-h5X" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vma-hU-G31"/>
+                            <constraint firstItem="y8c-6K-ijU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vvU-1c-VGr"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20.5" id="wBw-Yo-utU"/>
+                            <constraint firstItem="1AZ-cV-JAZ" firstAttribute="centerX" secondItem="y8c-6K-ijU" secondAttribute="centerX" id="xbT-Jh-y9l"/>
+                            <constraint firstItem="UVE-Bd-TTM" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="xqg-nD-mxU"/>
+                            <constraint firstItem="w1Q-rX-hxa" firstAttribute="centerX" secondItem="3jJ-jm-h5X" secondAttribute="centerX" id="yT8-WN-hof"/>
+                            <constraint firstItem="DcT-fe-cPu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zJ9-hE-RbP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answer" destination="DcT-fe-cPu" id="n5y-kb-WGy"/>
+                        <outlet property="billPrice" destination="UVE-Bd-TTM" id="aX8-8r-uby"/>
+                        <outlet property="ratingLabel" destination="y8c-6K-ijU" id="PQe-6Y-jwQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
